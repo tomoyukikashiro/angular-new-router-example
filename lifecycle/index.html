@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>lifecycle</title>
+<script src="../bower_components/angularjs/angular.js"></script>
+<script src="../bower_components/angular-new-router/dist/router.es5.js"></script>
+<script src="app.js"></script>
+<script src="components/home/home.js"></script>
+<script src="components/detail/detail.js"></script>
+</head>
+<body ng-app="lifecycle" ng-controller="LifecycleController">
+  <ul>
+    <li><a ng-link="home">Home</a></li>
+    <li><a ng-link="detail({id: '1'})">detail : 1</a></li>
+    <li><a ng-link="detail({id: '2'})">detail : 2</a></li>
+    <li><a ng-link="detail({id: '3'})">detail : 3</a></li>
+    <li><a ng-link="detail({id: '4'})">detail : 4</a></li>
+    <li><a ng-link="detail({id: '5'})">detail : 5</a></li>
+  </ul>
+  <section>
+    <h1>Question</h1>
+    <p>
+    In this source detail controller always returns false in canActivate so ng-viewport do not change to detail component. <br>
+    But url(hash) change to detail component path(#/detail/:id). <br>
+    I published this <a href="">problem.</a> 
+    </p>
+  </section>
+  <ng-viewport></ng-viewport>
+</body>
+</html>

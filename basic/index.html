@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>basic</title>
+<script src="../bower_components/angularjs/angular.js"></script>
+<script src="../bower_components/angular-new-router/dist/router.es5.js"></script>
+<script src="app.js"></script>
+<script src="components/home/home.js"></script>
+<script src="components/detail/detail.js"></script>
+</head>
+<body ng-app="basic" ng-controller="BasicController">
+  <ul>
+    <li><a ng-link="home">Home</a></li>
+    <li><a ng-link="detail({id: 'hoge'})">detail : hoge</a></li>
+  </ul>
+  <ng-viewport></ng-viewport>
+</body>
+</html>
